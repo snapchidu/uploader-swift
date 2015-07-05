@@ -8,11 +8,28 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate{
 
     @IBOutlet weak var linkField: UITextField!
     
     @IBOutlet weak var tagField: UITextField!
+    
+    @IBAction func selectVid(sender: UIButton) {
+        var myPickerController = UIImagePickerController()
+        myPickerController.delegate = self;
+        myPickerController.sourceType = UIImagePickerControllerSourceType.PhotoLibrary
+        self.presentViewController(myPickerController, animated: true, completion: nil)
+    }
+    
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [NSObject : AnyObject])
+        
+    {
+        let selectedImage = info[UIImagePickerControllerOriginalImage] as? NSString
+        println(selectedImage)
+        
+        self.dismissViewControllerAnimated(true, completion: nil)
+        
+    }
     
     @IBAction func sendUpload(sender: UIButton) {
 //        let urlPath =
