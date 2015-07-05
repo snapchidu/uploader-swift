@@ -60,6 +60,12 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jCH-m9-oHY">
+                                <rect key="frame" x="181" y="20" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="CpJ-Rr-6uM"/>
+                                </constraints>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ngj-6b-dA9">
                                 <rect key="frame" x="251" y="442" width="100" height="50"/>
                                 <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="0.84999999999999998" colorSpace="calibratedRGB"/>
@@ -89,13 +95,16 @@
                             <constraint firstItem="Whh-DK-gN6" firstAttribute="centerX" secondItem="2xK-gF-Mgb" secondAttribute="centerX" id="OTc-Ak-qkS"/>
                             <constraint firstItem="Ngj-6b-dA9" firstAttribute="centerX" secondItem="2xK-gF-Mgb" secondAttribute="centerX" constant="0.5" id="Po1-w8-HVG"/>
                             <constraint firstItem="FUA-Sh-l3V" firstAttribute="leading" secondItem="Whh-DK-gN6" secondAttribute="leading" id="SXX-IS-AVU"/>
+                            <constraint firstItem="jCH-m9-oHY" firstAttribute="centerX" secondItem="Ngj-6b-dA9" secondAttribute="centerX" id="U98-Vh-74J"/>
                             <constraint firstItem="2xK-gF-Mgb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="WnM-nL-hok"/>
                             <constraint firstItem="Ngj-6b-dA9" firstAttribute="width" secondItem="2xK-gF-Mgb" secondAttribute="width" id="Xb6-Md-bOt"/>
+                            <constraint firstItem="FUA-Sh-l3V" firstAttribute="top" secondItem="jCH-m9-oHY" secondAttribute="bottom" constant="32" id="Yz4-hR-7ED"/>
                             <constraint firstItem="Div-7V-p9f" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="cJ2-q6-2Yk"/>
                             <constraint firstItem="FUA-Sh-l3V" firstAttribute="baseline" secondItem="Div-7V-p9f" secondAttribute="baseline" constant="-5" id="e6V-Yt-Wac"/>
                             <constraint firstItem="Ngj-6b-dA9" firstAttribute="height" secondItem="2xK-gF-Mgb" secondAttribute="height" id="hrr-FW-Da8"/>
                             <constraint firstItem="FUA-Sh-l3V" firstAttribute="centerY" secondItem="Div-7V-p9f" secondAttribute="centerY" constant="-3.5" id="iXW-Ad-EA8"/>
                             <constraint firstItem="7Q3-LE-wXp" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="nCd-EX-BwO"/>
+                            <constraint firstItem="jCH-m9-oHY" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="oY6-cX-59h"/>
                             <constraint firstItem="Whh-DK-gN6" firstAttribute="leading" secondItem="7Q3-LE-wXp" secondAttribute="trailing" constant="8" symbolic="YES" id="pHI-hS-XvC"/>
                             <constraint firstItem="FUA-Sh-l3V" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="160" id="qyj-wt-Vgt"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Ngj-6b-dA9" secondAttribute="bottom" constant="108" id="w59-Bo-oUl"/>
@@ -103,6 +112,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="MainImg" destination="jCH-m9-oHY" id="zu3-gP-Kfw"/>
                         <outlet property="linkField" destination="FUA-Sh-l3V" id="Fw6-UA-wBe"/>
                         <outlet property="tagField" destination="Whh-DK-gN6" id="qlb-m1-y8l"/>
                     </connections>
